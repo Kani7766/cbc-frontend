@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
 
 export default function LoginPage() {
 
@@ -9,7 +8,7 @@ export default function LoginPage() {
   const [password,setPassword] = useState("")
 
   function login(){
-    axios.post("http://localhost:5000/api/users/login",{
+    axios.post(import.meta.env.VITE_BACKEND_URL+"/api/users/login",{
       email : email,
       password : password
     }).then(
@@ -28,12 +27,12 @@ export default function LoginPage() {
         }
       }
     )
-  } 
+  }
 
   return (
     <div className='flex justify-center items-center w-full h-screen bg-red-900'>
      <div className='w-[450px] h-[450px] bg-blue-600 flex flex-col justify-center items-center'>
-     <img src='/logo.jpg' className='rounded-full w-[100px]'/>
+      <img src='/logo.jpg' className='rounded-full w-[100px] '/>
       <span>Email</span>
 
 
@@ -56,3 +55,4 @@ export default function LoginPage() {
     </div>
   );
 }
+
