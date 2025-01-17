@@ -109,6 +109,9 @@ export default function AdminProductsPage() {
                     <button
                       className="text-blue-500 hover:text-blue-700"
                       title="Edit"
+                      onClick={()=>{
+                        navigate("/admin/products/editProduct" , {state : {product : product}});
+                      }}
                     >
                       <FaPencil />
                     </button>
