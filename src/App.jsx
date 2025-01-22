@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import "./App.css";
-import LoginPage from './pages/loginPage';
-import HomePage from "./pages/homePage";
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import AdminHomePage from './pages/adminHomePage'
-import {Toaster} from 'react-hot-toast';
+import { useState } from "react"
+import "./App.css"
+import LoginPage from "./pages/loginPage";
+import HomePage from "./pages/home/homePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AdminHomePage from "./pages/adminHomePage";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [count, setCount] = useState(0)
